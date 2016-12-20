@@ -18,6 +18,7 @@
         <module>Entity</module>
         <module>DataApi</module>
         <module>DataImpl</module>
+        <module>Web</module>
     </modules>
     <build>
         <plugins>
