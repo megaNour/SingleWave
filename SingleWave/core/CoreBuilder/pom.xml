@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.avisto.singlewave</groupId>
+    <artifactId>CoreBuilder</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <properties>
+        <java.version>1.8</java.version>
+        <javaee.api.version>7.0</javaee.api.version>
+        <compiler.plugin.version>3.5.1</compiler.plugin.version>
+        <ejb.plugin.version>2.5.1</ejb.plugin.version>
+        <ejb.version>3.1</ejb.version>
+        <ear.plugin.version>2.10.1</ear.plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <modules>
+        <module>Entity</module>
+        <module>DataApi</module>
+        <module>DataImpl</module>
+    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <version>${ejb.plugin.version}</version>
+                <configuration>
+                    <ejbVersion>${ejb.version}</ejbVersion>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>${ear.plugin.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
