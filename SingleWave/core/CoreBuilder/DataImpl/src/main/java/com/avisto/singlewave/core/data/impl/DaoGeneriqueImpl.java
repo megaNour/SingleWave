@@ -20,7 +20,7 @@ public class DaoGeneriqueImpl<T> implements DaoGeneriqueItf<T> {
     /**
      * L'entity manager du dao.
      */
-    @PersistenceContext(unitName = "SingleWaveDS")
+    @PersistenceContext(unitName = "SingleWave")
     private EntityManager em;
 
     @Override
