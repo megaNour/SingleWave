@@ -40,7 +40,7 @@ public class Localisation extends Categorie {
     /**
      *
      */
-    @OneToMany(mappedBy = "localisation_fk")
+    @OneToMany(mappedBy = "localisation")
     private List<Lieu> lieux;
 
     /**

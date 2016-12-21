@@ -44,7 +44,7 @@ public class Lieu  implements Serializable {
      *
      */
     @ManyToOne
-    @JoinColumn(name = "localisation_fk")
+    @JoinColumn(name = "localisation_fk", insertable=false, updatable=false)
     private Localisation localisation;
 
     /**
