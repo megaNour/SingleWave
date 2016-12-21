@@ -13,25 +13,25 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>${parent.groupId}</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>Entity</artifactId>
-			<version>${parent.version}</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>${parent.groupId}</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>DataApi</artifactId>
-			<version>${parent.version}</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>${parent.groupId}</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>DataImpl</artifactId>
-			<version>${parent.version}</version>
+			<version>${project.version}</version>
 			<type>ejb</type>
 		</dependency>
 		<dependency>
-			<groupId>${parent.groupId}</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>Web</artifactId>
-			<version>${parent.version}</version>
+			<version>${project.version}</version>
 			<type>war</type>
 		</dependency>
 	</dependencies>
