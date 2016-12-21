@@ -9,7 +9,7 @@
 	<properties>
 		<jsf.api.version>2.1</jsf.api.version>
 	</properties>
-	<artifactId>Web</artifactId>
+	<artifactId>SingleWaveWeb</artifactId>
 	<packaging>war</packaging>
 	<dependencies>
 		<dependency>
