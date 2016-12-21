@@ -1,0 +1,1 @@
+INSERT INTO Categorie (libelle) VALUES ("coucou");

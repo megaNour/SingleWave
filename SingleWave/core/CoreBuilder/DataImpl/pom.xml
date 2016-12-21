@@ -10,15 +10,15 @@
     <packaging>ejb</packaging>
     <dependencies>
         <dependency>
-            <groupId>${parent.groupId}</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>DataApi</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>${parent.groupId}</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>Entity</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

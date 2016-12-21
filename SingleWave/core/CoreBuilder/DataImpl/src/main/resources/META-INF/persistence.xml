@@ -2,11 +2,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
     version="2.0">
-    <persistence-unit name="SingleWave">
+    <persistence-unit name="SingleWaveDS">
         <description>
             unite de persistence de SingleWave Core configuree pour fonctionner avec MySQL
         </description>
-        <jta-data-source>jdbc/SingleWaveDB</jta-data-source>
+        <jta-data-source>java:jboss/datasources/SingleWaveDS</jta-data-source>
         <class>com.avisto.singlewave.core.entity.Categorie</class>
         <class>com.avisto.singlewave.core.entity.CategorieEvenement</class>
         <class>com.avisto.singlewave.core.entity.CategorieLieu</class>
@@ -19,7 +19,7 @@
         <class>com.avisto.singlewave.core.entity.Statut</class>
         <class>com.avisto.singlewave.core.entity.Utilisateur</class>
         <properties>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.hbm2ddl.auto" value="create" />
         </properties>
     </persistence-unit>
