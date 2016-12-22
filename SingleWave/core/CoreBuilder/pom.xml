@@ -16,6 +16,8 @@
 	</properties>
 	<modules>
 		<module>Entity</module>
+		<module>Dto</module>
+		<module>Wrap</module>
 		<module>DataApi</module>
 		<module>DataImpl</module>
 		<module>Web</module>
