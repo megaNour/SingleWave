@@ -8,20 +8,20 @@ public class LoginWrap {
     /**
      *
      */
-    private String identifiant;
+    private String login;
     /**
      *
      */
-    private String mdp;
+    private String password;
     /**
      * Constructeur surchargé .
-     * @param paramIdentifiant .
-     * @param paramMdp .
+     * @param paramLogin .
+     * @param paramPassword .
      */
-    public LoginWrap(String paramIdentifiant, String paramMdp) {
+    public LoginWrap(String paramLogin, String paramPassword) {
         super();
-        identifiant = paramIdentifiant;
-        mdp = paramMdp;
+        login = paramLogin;
+        password = paramPassword;
     }
     /**
      *
@@ -30,27 +30,27 @@ public class LoginWrap {
         super();
     }
     /**
-     * @return the identifiant
+     * @return the login
      */
-    public String getIdentifiant() {
-        return identifiant;
+    public String getLogin() {
+        return login;
     }
     /**
-     * @param paramIdentifiant the identifiant to set
+     * @param paramLogin the login to set
      */
-    public void setIdentifiant(String paramIdentifiant) {
-        identifiant = paramIdentifiant;
+    public void setLogin(String paramLogin) {
+        login = paramLogin;
     }
     /**
-     * @return the mdp
+     * @return the password
      */
-    public String getMdp() {
-        return mdp;
+    public String getPassword() {
+        return password;
     }
     /**
-     * @param paramMdp the mdp to set
+     * @param paramPassword the password to set
      */
-    public void setMdp(String paramMdp) {
-        mdp = paramMdp;
+    public void setPassword(String paramPassword) {
+        password = paramPassword;
     }
 }

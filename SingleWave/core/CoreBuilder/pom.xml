@@ -21,6 +21,7 @@
 		<module>DataApi</module>
 		<module>DataImpl</module>
 		<module>Web</module>
+		<module>RestAdapter</module>
 		<module>Ear</module>
 	</modules>
 	<build>
@@ -54,6 +55,10 @@
 						<webModule>
 							<groupId>${project.groupId}</groupId>
 							<artifactId>Web</artifactId>
+						</webModule>
+						<webModule>
+							<groupId>${project.groupId}</groupId>
+							<artifactId>RestAdapter</artifactId>
 						</webModule>
 					</modules>
 				</configuration>
