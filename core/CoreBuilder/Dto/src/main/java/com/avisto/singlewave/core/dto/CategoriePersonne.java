@@ -32,12 +32,12 @@ public class CategoriePersonne extends Categorie {
     /**
      *
      */
-    private Utilisateur possesseur;
+    private UtilisateurDto possesseur;
 
     /**
      *
      */
-    private Utilisateur personne;
+    private UtilisateurDto personne;
 
     /**
      * @return the parent
@@ -70,28 +70,28 @@ public class CategoriePersonne extends Categorie {
     /**
      * @return the possesseur
      */
-    public Utilisateur getPossesseur() {
+    public UtilisateurDto getPossesseur() {
         return possesseur;
     }
 
     /**
      * @param paramPossesseur the possesseur to set
      */
-    public void setPossesseur(Utilisateur paramPossesseur) {
+    public void setPossesseur(UtilisateurDto paramPossesseur) {
         possesseur = paramPossesseur;
     }
 
     /**
      * @return the personne
      */
-    public Utilisateur getPersonne() {
+    public UtilisateurDto getPersonne() {
         return personne;
     }
 
     /**
      * @param paramPersonne the personne to set
      */
-    public void setPersonne(Utilisateur paramPersonne) {
+    public void setPersonne(UtilisateurDto paramPersonne) {
         personne = paramPersonne;
     }
 }

@@ -1,5 +1,7 @@
 package com.avisto.singlewave.core.rest.adapter;
 
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -8,7 +10,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.avisto.singlewave.core.dto.Utilisateur;
+import com.avisto.singlewave.core.data.api.DaoUtilisateurItf;
+import com.avisto.singlewave.core.dto.UtilisateurDto;
 import com.avisto.singlewave.core.wrap.LoginWrap;
 
 /**
@@ -24,21 +27,58 @@ import com.avisto.singlewave.core.wrap.LoginWrap;
  * @author alkotob
  *
  */
+@Stateless
 @Path("/connexion")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class ConnexionRoot {
+
+    @EJB
+    private DaoUtilisateurItf daoUtilisateur;
     /**
      * Methode d'identification .
      * @param login .
-     * @return un {@link Utilisateur} ou null si echec .
+     * @return un {@link UtilisateurDto} ou null si echec .
      */
     @POST
     @Path("/post")
-//    @Consumes("application/x-www-form-urlencoded")
     public String login(LoginWrap login) {
         String resultat = "";
         resultat = "login:" + login.getLogin() + " password:" + login.getPassword();
+        return resultat;
+    }
+    /**
+     * Methode d'identification .
+     * @param login .
+     * @return un {@link UtilisateurDto} ou null si echec .
+     */
+    @POST
+    @Path("/signup")
+    public String signUp(LoginWrap login) {
+        String resultat = "";
+        UtilisateurDto utilisateur = new UtilisateurDto();
+        utilisateur.setMail(login.getLogin());
+        utilisateur.setPassword(login.getPassword());
+        resultat = "login:" + utilisateur.getMail() + " password:" + utilisateur.getPassword();
+        utilisateur = daoUtilisateur.signUp(utilisateur);
+        if (utilisateur != null) {
+            System.out.println("########## sign up ########## : " + resultat);
+        } else {
+            System.out.println("########## sign up ########## : echec " + resultat);
+        }
+        return resultat;
+    }
+    /**
+     * Methode d'identification .
+     * @param login .
+     * @return un {@link UtilisateurDto} ou null si echec .
+     */
+    @POST
+    @Path("/signin")
+    public String signin(LoginWrap login) {
+        String resultat = "";
+        resultat = "login:" + login.getLogin() + " password:" + login.getPassword();
+        System.out.println("########## sign in ########## : " + resultat);
         return resultat;
     }
 

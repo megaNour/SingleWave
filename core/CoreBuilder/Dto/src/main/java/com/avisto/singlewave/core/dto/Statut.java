@@ -32,7 +32,7 @@ public class Statut implements Serializable {
     /**
      *
      */
-    private Utilisateur invite;
+    private UtilisateurDto invite;
 
     /**
      *
@@ -56,14 +56,14 @@ public class Statut implements Serializable {
     /**
      * @return the invite
      */
-    public Utilisateur getInvite() {
+    public UtilisateurDto getInvite() {
         return invite;
     }
 
     /**
      * @param paramInvite the invite to set
      */
-    public void setInvite(Utilisateur paramInvite) {
+    public void setInvite(UtilisateurDto paramInvite) {
         invite = paramInvite;
     }
 

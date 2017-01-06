@@ -16,12 +16,12 @@ public class DaoGeneriqueImpl<T> implements DaoGeneriqueItf<T> {
     /**
      * Le type manipule.
      */
-    private Class<T> type;
+    protected Class<T> type;
     /**
      * L'entity manager du dao.
      */
     @PersistenceContext(unitName = "SingleWaveDS")
-    private EntityManager em;
+    protected EntityManager em;
 
     @Override
     public T find(Integer paramId) {

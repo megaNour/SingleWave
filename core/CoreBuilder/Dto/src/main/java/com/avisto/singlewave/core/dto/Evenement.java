@@ -44,7 +44,7 @@ public class Evenement implements Serializable {
     /**
      *
      */
-    private Utilisateur createur;
+    private UtilisateurDto createur;
 
     /**
      *
@@ -120,14 +120,14 @@ public class Evenement implements Serializable {
     /**
      * @return the createur
      */
-    public Utilisateur getCreateur() {
+    public UtilisateurDto getCreateur() {
         return createur;
     }
 
     /**
      * @param paramCreateur the createur to set
      */
-    public void setCreateur(Utilisateur paramCreateur) {
+    public void setCreateur(UtilisateurDto paramCreateur) {
         createur = paramCreateur;
     }
 

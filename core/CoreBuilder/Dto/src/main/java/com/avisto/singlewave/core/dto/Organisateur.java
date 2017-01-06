@@ -32,7 +32,7 @@ public class Organisateur implements Serializable {
     /**
      *
      */
-    private Utilisateur utilisateur;
+    private UtilisateurDto utilisateur;
 
     /**
      * @return the evenement
@@ -51,14 +51,14 @@ public class Organisateur implements Serializable {
     /**
      * @return the utilisateur
      */
-    public Utilisateur getUtilisateur() {
+    public UtilisateurDto getUtilisateur() {
         return utilisateur;
     }
 
     /**
      * @param paramUtilisateur the utilisateur to set
      */
-    public void setUtilisateur(Utilisateur paramUtilisateur) {
+    public void setUtilisateur(UtilisateurDto paramUtilisateur) {
         utilisateur = paramUtilisateur;
     }
 
