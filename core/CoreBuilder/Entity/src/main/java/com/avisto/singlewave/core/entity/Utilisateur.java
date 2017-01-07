@@ -3,8 +3,10 @@ package com.avisto.singlewave.core.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -73,33 +75,33 @@ public class Utilisateur implements Serializable {
     /**
      *
      */
-    @OneToMany(mappedBy = "createur")
+    @OneToMany(mappedBy = "createur", fetch = FetchType.LAZY)
     private List<Evenement> evenementsCrees;
 
     /**
      *
      */
-    @OneToMany(mappedBy = "invite")
+    @OneToMany(mappedBy = "invite", fetch = FetchType.LAZY)
     private List<Statut> statut;
 
     /**
      *
      */
-    @OneToMany(mappedBy = "personne")
+    @OneToMany(mappedBy = "personne", fetch = FetchType.LAZY)
     private List<CategoriePersonne> categoriesPersonnesParents;
 
 
     /**
      *
      */
-    @OneToMany(mappedBy = "possesseur")
+    @OneToMany(mappedBy = "possesseur", fetch = FetchType.LAZY)
     private List<CategoriePersonne> categoriesPersonnesEnfants;
 
 
     /**
      *
      */
-    @OneToMany(mappedBy = "utilisateur")
+    @OneToMany(mappedBy = "utilisateur", fetch = FetchType.LAZY)
     private List<Organisateur> organisateur;
 
 

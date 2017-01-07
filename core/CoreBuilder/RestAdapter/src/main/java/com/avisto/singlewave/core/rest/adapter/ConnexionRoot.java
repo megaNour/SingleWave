@@ -11,7 +11,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.avisto.singlewave.core.data.api.DaoUtilisateurItf;
-import com.avisto.singlewave.core.dto.UtilisateurDto;
+import com.avisto.singlewave.core.dto.DtoUtilisateur;
 import com.avisto.singlewave.core.wrap.LoginWrap;
 
 /**
@@ -38,7 +38,7 @@ public class ConnexionRoot {
     /**
      * Methode d'identification .
      * @param login .
-     * @return un {@link UtilisateurDto} ou null si echec .
+     * @return un {@link DtoUtilisateur} ou null si echec .
      */
     @POST
     @Path("/post")
@@ -50,36 +50,30 @@ public class ConnexionRoot {
     /**
      * Methode d'identification .
      * @param login .
-     * @return un {@link UtilisateurDto} ou null si echec .
+     * @return un {@link DtoUtilisateur} ou null si echec .
      */
     @POST
     @Path("/signup")
-    public String signUp(LoginWrap login) {
-        String resultat = "";
-        UtilisateurDto utilisateur = new UtilisateurDto();
+    public DtoUtilisateur signUp(LoginWrap login) {
+        DtoUtilisateur utilisateur = new DtoUtilisateur();
         utilisateur.setMail(login.getLogin());
         utilisateur.setPassword(login.getPassword());
-        resultat = "login:" + utilisateur.getMail() + " password:" + utilisateur.getPassword();
         utilisateur = daoUtilisateur.signUp(utilisateur);
-        if (utilisateur != null) {
-            System.out.println("########## sign up ########## : " + resultat);
-        } else {
-            System.out.println("########## sign up ########## : echec " + resultat);
-        }
-        return resultat;
+        return utilisateur;
     }
     /**
      * Methode d'identification .
      * @param login .
-     * @return un {@link UtilisateurDto} ou null si echec .
+     * @return un {@link DtoUtilisateur} ou null si echec .
      */
     @POST
     @Path("/signin")
-    public String signin(LoginWrap login) {
-        String resultat = "";
-        resultat = "login:" + login.getLogin() + " password:" + login.getPassword();
-        System.out.println("########## sign in ########## : " + resultat);
-        return resultat;
+    public DtoUtilisateur signin(LoginWrap login) {
+        DtoUtilisateur utilisateur = new DtoUtilisateur();
+        utilisateur.setMail(login.getLogin());
+        utilisateur.setPassword(login.getPassword());
+        utilisateur = daoUtilisateur.signIn(utilisateur);
+        return utilisateur;
     }
 
     @GET

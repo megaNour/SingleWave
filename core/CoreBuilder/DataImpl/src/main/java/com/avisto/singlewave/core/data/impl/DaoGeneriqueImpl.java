@@ -25,14 +25,14 @@ public class DaoGeneriqueImpl<T> implements DaoGeneriqueItf<T> {
 
     @Override
     public T find(Integer paramId) {
-        // TODO Auto-generated method stub
+        em.find(type, paramId);
         return null;
     }
 
     @Override
     public T persist(T paramT) {
-        // TODO Auto-generated method stub
-        return null;
+        em.persist(paramT);
+        return paramT;
     }
 
     @Override

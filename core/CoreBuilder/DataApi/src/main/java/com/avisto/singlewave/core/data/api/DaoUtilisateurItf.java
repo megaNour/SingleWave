@@ -1,11 +1,8 @@
 package com.avisto.singlewave.core.data.api;
 
-import javax.ejb.Local;
-
-import com.avisto.singlewave.core.dto.UtilisateurDto;
-@Local
+import com.avisto.singlewave.core.dto.DtoUtilisateur;
 public interface DaoUtilisateurItf {
-    public void init();
-    public UtilisateurDto signUp(UtilisateurDto paramUtilisateur);
-    public UtilisateurDto signIn(UtilisateurDto paramUtilisateur);
+    public DtoUtilisateur signUp(DtoUtilisateur paramUtilisateur);
+    public DtoUtilisateur signIn(DtoUtilisateur paramUtilisateur);
+    public DtoUtilisateur findByLogin(String paramLogin);
 }

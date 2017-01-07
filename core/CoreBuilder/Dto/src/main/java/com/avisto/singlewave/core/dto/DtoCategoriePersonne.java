@@ -6,7 +6,7 @@ import java.util.List;
 /**
  *
  */
-public class CategoriePersonne extends Categorie {
+public class DtoCategoriePersonne extends DtoCategorie {
 
     /**
      * En vue du SOA.
@@ -16,82 +16,82 @@ public class CategoriePersonne extends Categorie {
     /**
      * Default constructor.
      */
-    public CategoriePersonne() {
+    public DtoCategoriePersonne() {
     }
 
     /**
      *
      */
-    private CategoriePersonne parent;
+    private DtoCategoriePersonne parent;
 
     /**
      *
      */
-    private List<CategoriePersonne> enfants;
+    private List<DtoCategoriePersonne> enfants;
 
     /**
      *
      */
-    private UtilisateurDto possesseur;
+    private DtoUtilisateur possesseur;
 
     /**
      *
      */
-    private UtilisateurDto personne;
+    private DtoUtilisateur personne;
 
     /**
      * @return the parent
      */
-    public CategoriePersonne getParent() {
+    public DtoCategoriePersonne getParent() {
         return parent;
     }
 
     /**
      * @param paramParent the parent to set
      */
-    public void setParent(CategoriePersonne paramParent) {
+    public void setParent(DtoCategoriePersonne paramParent) {
         parent = paramParent;
     }
 
     /**
      * @return the enfants
      */
-    public List<CategoriePersonne> getEnfants() {
+    public List<DtoCategoriePersonne> getEnfants() {
         return enfants;
     }
 
     /**
      * @param paramEnfants the enfants to set
      */
-    public void setEnfants(List<CategoriePersonne> paramEnfants) {
+    public void setEnfants(List<DtoCategoriePersonne> paramEnfants) {
         enfants = paramEnfants;
     }
 
     /**
      * @return the possesseur
      */
-    public UtilisateurDto getPossesseur() {
+    public DtoUtilisateur getPossesseur() {
         return possesseur;
     }
 
     /**
      * @param paramPossesseur the possesseur to set
      */
-    public void setPossesseur(UtilisateurDto paramPossesseur) {
+    public void setPossesseur(DtoUtilisateur paramPossesseur) {
         possesseur = paramPossesseur;
     }
 
     /**
      * @return the personne
      */
-    public UtilisateurDto getPersonne() {
+    public DtoUtilisateur getPersonne() {
         return personne;
     }
 
     /**
      * @param paramPersonne the personne to set
      */
-    public void setPersonne(UtilisateurDto paramPersonne) {
+    public void setPersonne(DtoUtilisateur paramPersonne) {
         personne = paramPersonne;
     }
 }

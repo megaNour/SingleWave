@@ -7,7 +7,7 @@ import java.util.List;
 /**
  *
  */
-public class Lieu  implements Serializable {
+public class DtoLieu  implements Serializable {
 
     /**
      * En vue du SOA.
@@ -17,7 +17,7 @@ public class Lieu  implements Serializable {
     /**
      * Default constructor.
      */
-    public Lieu() {
+    public DtoLieu() {
     }
 
     /**
@@ -33,17 +33,17 @@ public class Lieu  implements Serializable {
     /**
      *
      */
-    private Localisation localisation;
+    private DtoLocalisation localisation;
 
     /**
      *
      */
-    private CategorieLieu categorie;
+    private DtoCategorieLieu categorie;
 
     /**
      *
      */
-    private List<Evenement> evenements;
+    private List<DtoEvenement> evenements;
 
     /**
      * @return the id
@@ -76,42 +76,42 @@ public class Lieu  implements Serializable {
     /**
      * @return the localisation
      */
-    public Localisation getLocalisation() {
+    public DtoLocalisation getLocalisation() {
         return localisation;
     }
 
     /**
      * @param paramLocalisation the localisation to set
      */
-    public void setLocalisation(Localisation paramLocalisation) {
+    public void setLocalisation(DtoLocalisation paramLocalisation) {
         localisation = paramLocalisation;
     }
 
     /**
      * @return the categorie
      */
-    public CategorieLieu getCategorie() {
+    public DtoCategorieLieu getCategorie() {
         return categorie;
     }
 
     /**
      * @param paramCategorie the categorie to set
      */
-    public void setCategorie(CategorieLieu paramCategorie) {
+    public void setCategorie(DtoCategorieLieu paramCategorie) {
         categorie = paramCategorie;
     }
 
     /**
      * @return the evenements
      */
-    public List<Evenement> getEvenements() {
+    public List<DtoEvenement> getEvenements() {
         return evenements;
     }
 
     /**
      * @param paramEvenements the evenements to set
      */
-    public void setEvenements(List<Evenement> paramEvenements) {
+    public void setEvenements(List<DtoEvenement> paramEvenements) {
         evenements = paramEvenements;
     }
 }

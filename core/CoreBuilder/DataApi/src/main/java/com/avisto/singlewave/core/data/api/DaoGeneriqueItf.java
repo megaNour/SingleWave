@@ -1,13 +1,10 @@
 package com.avisto.singlewave.core.data.api;
 
-import javax.ejb.Local;
-
 /**
  * @author alkotob
  * L'interface qui definit le dao generique.
  * @param <T> le type manipulé. Sera donné dans le constructeur des dao
  */
-@Local
 public interface DaoGeneriqueItf<T> {
     /**
      * find generique.

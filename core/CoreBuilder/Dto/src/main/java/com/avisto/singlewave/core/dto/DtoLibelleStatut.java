@@ -2,11 +2,12 @@ package com.avisto.singlewave.core.dto;
 
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  *
  */
-public class Categorie implements Serializable {
+public class DtoLibelleStatut implements Serializable {
 
     /**
      * En vue du SOA.
@@ -16,7 +17,7 @@ public class Categorie implements Serializable {
     /**
      * Default constructor.
      */
-    public Categorie() {
+    public DtoLibelleStatut() {
     }
 
     /**
@@ -28,6 +29,11 @@ public class Categorie implements Serializable {
      *
      */
     private String libelle;
+
+    /**
+     *
+     */
+    private List<DtoStatut> statuts;
 
     /**
      * @return the id
@@ -55,5 +61,19 @@ public class Categorie implements Serializable {
      */
     public void setLibelle(String paramLibelle) {
         libelle = paramLibelle;
+    }
+
+    /**
+     * @return the statuts
+     */
+    public List<DtoStatut> getStatuts() {
+        return statuts;
+    }
+
+    /**
+     * @param paramStatuts the statuts to set
+     */
+    public void setStatuts(List<DtoStatut> paramStatuts) {
+        statuts = paramStatuts;
     }
 }

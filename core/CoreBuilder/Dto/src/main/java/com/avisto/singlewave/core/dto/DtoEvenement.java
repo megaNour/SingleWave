@@ -8,7 +8,7 @@ import java.util.List;
 /**
  *
  */
-public class Evenement implements Serializable {
+public class DtoEvenement implements Serializable {
 
     /**
      * En vue du SOA.
@@ -18,7 +18,7 @@ public class Evenement implements Serializable {
     /**
      * Default constructor.
      */
-    public Evenement() {
+    public DtoEvenement() {
     }
 
     /**
@@ -39,27 +39,27 @@ public class Evenement implements Serializable {
     /**
      *
      */
-    private CategorieEvenement categorie;
+    private DtoCategorieEvenement categorie;
 
     /**
      *
      */
-    private UtilisateurDto createur;
+    private DtoUtilisateur createur;
 
     /**
      *
      */
-    private List<Organisateur> organisateurs;
+    private List<DtoOrganisateur> organisateurs;
 
     /**
      *
      */
-    private List<Statut> statuts;
+    private List<DtoStatut> statuts;
 
     /**
      *
      */
-    private Lieu lieu;
+    private DtoLieu lieu;
 
     /**
      * @return the id
@@ -106,70 +106,70 @@ public class Evenement implements Serializable {
     /**
      * @return the categorie
      */
-    public CategorieEvenement getCategorie() {
+    public DtoCategorieEvenement getCategorie() {
         return categorie;
     }
 
     /**
      * @param paramCategorie the categorie to set
      */
-    public void setCategorie(CategorieEvenement paramCategorie) {
+    public void setCategorie(DtoCategorieEvenement paramCategorie) {
         categorie = paramCategorie;
     }
 
     /**
      * @return the createur
      */
-    public UtilisateurDto getCreateur() {
+    public DtoUtilisateur getCreateur() {
         return createur;
     }
 
     /**
      * @param paramCreateur the createur to set
      */
-    public void setCreateur(UtilisateurDto paramCreateur) {
+    public void setCreateur(DtoUtilisateur paramCreateur) {
         createur = paramCreateur;
     }
 
     /**
      * @return the organisateurs
      */
-    public List<Organisateur> getOrganisateurs() {
+    public List<DtoOrganisateur> getOrganisateurs() {
         return organisateurs;
     }
 
     /**
      * @param paramOrganisateurs the organisateurs to set
      */
-    public void setOrganisateurs(List<Organisateur> paramOrganisateurs) {
+    public void setOrganisateurs(List<DtoOrganisateur> paramOrganisateurs) {
         organisateurs = paramOrganisateurs;
     }
 
     /**
      * @return the statuts
      */
-    public List<Statut> getStatuts() {
+    public List<DtoStatut> getStatuts() {
         return statuts;
     }
 
     /**
      * @param paramStatuts the statuts to set
      */
-    public void setStatuts(List<Statut> paramStatuts) {
+    public void setStatuts(List<DtoStatut> paramStatuts) {
         statuts = paramStatuts;
     }
 
     /**
      * @return the lieu
      */
-    public Lieu getLieu() {
+    public DtoLieu getLieu() {
         return lieu;
     }
 
     /**
      * @param paramLieu the lieu to set
      */
-    public void setLieu(Lieu paramLieu) {
+    public void setLieu(DtoLieu paramLieu) {
         lieu = paramLieu;
     }
 }

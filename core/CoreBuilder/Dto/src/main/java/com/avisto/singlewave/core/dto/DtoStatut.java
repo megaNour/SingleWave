@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  *
  */
-public class Statut implements Serializable {
+public class DtoStatut implements Serializable {
 
     /**
      * En vue du SOA.
@@ -21,63 +21,63 @@ public class Statut implements Serializable {
     /**
      * Default constructor.
      */
-    public Statut() {
+    public DtoStatut() {
     }
 
     /**
      *
      */
-    private Evenement evenement;
+    private DtoEvenement evenement;
 
     /**
      *
      */
-    private UtilisateurDto invite;
+    private DtoUtilisateur invite;
 
     /**
      *
      */
-    private LibelleStatut libelleStatut;
+    private DtoLibelleStatut libelleStatut;
 
     /**
      * @return the evenement
      */
-    public Evenement getEvenement() {
+    public DtoEvenement getEvenement() {
         return evenement;
     }
 
     /**
      * @param paramEvenement the evenement to set
      */
-    public void setEvenement(Evenement paramEvenement) {
+    public void setEvenement(DtoEvenement paramEvenement) {
         evenement = paramEvenement;
     }
 
     /**
      * @return the invite
      */
-    public UtilisateurDto getInvite() {
+    public DtoUtilisateur getInvite() {
         return invite;
     }
 
     /**
      * @param paramInvite the invite to set
      */
-    public void setInvite(UtilisateurDto paramInvite) {
+    public void setInvite(DtoUtilisateur paramInvite) {
         invite = paramInvite;
     }
 
     /**
      * @return the libelleStatut
      */
-    public LibelleStatut getLibelleStatut() {
+    public DtoLibelleStatut getLibelleStatut() {
         return libelleStatut;
     }
 
     /**
      * @param paramLibelleStatut the libelleStatut to set
      */
-    public void setLibelleStatut(LibelleStatut paramLibelleStatut) {
+    public void setLibelleStatut(DtoLibelleStatut paramLibelleStatut) {
         libelleStatut = paramLibelleStatut;
     }
 

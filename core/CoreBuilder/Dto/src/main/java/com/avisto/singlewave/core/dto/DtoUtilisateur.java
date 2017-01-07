@@ -7,7 +7,7 @@ import java.util.List;
 /**
  *
  */
-public class Utilisateur implements Serializable {
+public class DtoUtilisateur implements Serializable {
 
     /**
      * En vue du SOA.
@@ -17,7 +17,7 @@ public class Utilisateur implements Serializable {
     /**
      * Default constructor.
      */
-    public Utilisateur() {
+    public DtoUtilisateur() {
     }
 
     /**
@@ -58,29 +58,29 @@ public class Utilisateur implements Serializable {
     /**
      *
      */
-    private List<Evenement> evenementsCrees;
+    private List<DtoEvenement> evenementsCrees;
 
     /**
      *
      */
-    private List<Statut> statut;
+    private List<DtoStatut> statut;
 
     /**
      *
      */
-    private List<CategoriePersonne> categoriesPersonnesParents;
-
-
-    /**
-     *
-     */
-    private List<CategoriePersonne> categoriesPersonnesEnfants;
+    private List<DtoCategoriePersonne> categoriesPersonnesParents;
 
 
     /**
      *
      */
-    private List<Organisateur> organisateur;
+    private List<DtoCategoriePersonne> categoriesPersonnesEnfants;
+
+
+    /**
+     *
+     */
+    private List<DtoOrganisateur> organisateur;
 
 
     /**
@@ -198,7 +198,7 @@ public class Utilisateur implements Serializable {
     /**
      * @return the evenementsCrees
      */
-    public List<Evenement> getEvenementsCrees() {
+    public List<DtoEvenement> getEvenementsCrees() {
         return evenementsCrees;
     }
 
@@ -206,7 +206,7 @@ public class Utilisateur implements Serializable {
     /**
      * @param paramEvenementsCrees the evenementsCrees to set
      */
-    public void setEvenementsCrees(List<Evenement> paramEvenementsCrees) {
+    public void setEvenementsCrees(List<DtoEvenement> paramEvenementsCrees) {
         evenementsCrees = paramEvenementsCrees;
     }
 
@@ -214,7 +214,7 @@ public class Utilisateur implements Serializable {
     /**
      * @return the statut
      */
-    public List<Statut> getStatut() {
+    public List<DtoStatut> getStatut() {
         return statut;
     }
 
@@ -222,7 +222,7 @@ public class Utilisateur implements Serializable {
     /**
      * @param paramStatut the statut to set
      */
-    public void setStatut(List<Statut> paramStatut) {
+    public void setStatut(List<DtoStatut> paramStatut) {
         statut = paramStatut;
     }
 
@@ -230,7 +230,7 @@ public class Utilisateur implements Serializable {
     /**
      * @return the categoriesPersonnesParents
      */
-    public List<CategoriePersonne> getCategoriesPersonnesParents() {
+    public List<DtoCategoriePersonne> getCategoriesPersonnesParents() {
         return categoriesPersonnesParents;
     }
 
@@ -239,7 +239,7 @@ public class Utilisateur implements Serializable {
      * @param paramCategoriesPersonnesParents the categoriesPersonnesParents to set
      */
     public void setCategoriesPersonnesParents(
-            List<CategoriePersonne> paramCategoriesPersonnesParents) {
+            List<DtoCategoriePersonne> paramCategoriesPersonnesParents) {
         categoriesPersonnesParents = paramCategoriesPersonnesParents;
     }
 
@@ -247,7 +247,7 @@ public class Utilisateur implements Serializable {
     /**
      * @return the categoriesPersonnesEnfants
      */
-    public List<CategoriePersonne> getCategoriesPersonnesEnfants() {
+    public List<DtoCategoriePersonne> getCategoriesPersonnesEnfants() {
         return categoriesPersonnesEnfants;
     }
 
@@ -256,7 +256,7 @@ public class Utilisateur implements Serializable {
      * @param paramCategoriesPersonnesEnfants the categoriesPersonnesEnfants to set
      */
     public void setCategoriesPersonnesEnfants(
-            List<CategoriePersonne> paramCategoriesPersonnesEnfants) {
+            List<DtoCategoriePersonne> paramCategoriesPersonnesEnfants) {
         categoriesPersonnesEnfants = paramCategoriesPersonnesEnfants;
     }
 
@@ -264,7 +264,7 @@ public class Utilisateur implements Serializable {
     /**
      * @return the organisateur
      */
-    public List<Organisateur> getOrganisateur() {
+    public List<DtoOrganisateur> getOrganisateur() {
         return organisateur;
     }
 
@@ -272,7 +272,7 @@ public class Utilisateur implements Serializable {
     /**
      * @param paramOrganisateur the organisateur to set
      */
-    public void setOrganisateur(List<Organisateur> paramOrganisateur) {
+    public void setOrganisateur(List<DtoOrganisateur> paramOrganisateur) {
         organisateur = paramOrganisateur;
     }
 }

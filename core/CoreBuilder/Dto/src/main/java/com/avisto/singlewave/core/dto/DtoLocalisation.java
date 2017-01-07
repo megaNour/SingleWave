@@ -6,7 +6,7 @@ import java.util.List;
 /**
  *
  */
-public class Localisation extends Categorie {
+public class DtoLocalisation extends DtoCategorie {
 
     /**
      * En vue du SOA.
@@ -16,63 +16,63 @@ public class Localisation extends Categorie {
     /**
      * Default constructor.
      */
-    public Localisation() {
+    public DtoLocalisation() {
     }
 
     /**
      *
      */
-    private Localisation parent;
+    private DtoLocalisation parent;
 
     /**
      *
      */
-    private List<Localisation> enfants;
+    private List<DtoLocalisation> enfants;
 
     /**
      *
      */
-    private List<Lieu> lieux;
+    private List<DtoLieu> lieux;
 
     /**
      * @return the parent
      */
-    public Localisation getParent() {
+    public DtoLocalisation getParent() {
         return parent;
     }
 
     /**
      * @param paramParent the parent to set
      */
-    public void setParent(Localisation paramParent) {
+    public void setParent(DtoLocalisation paramParent) {
         parent = paramParent;
     }
 
     /**
      * @return the enfants
      */
-    public List<Localisation> getEnfants() {
+    public List<DtoLocalisation> getEnfants() {
         return enfants;
     }
 
     /**
      * @param paramEnfants the enfants to set
      */
-    public void setEnfants(List<Localisation> paramEnfants) {
+    public void setEnfants(List<DtoLocalisation> paramEnfants) {
         enfants = paramEnfants;
     }
 
     /**
      * @return the lieux
      */
-    public List<Lieu> getLieux() {
+    public List<DtoLieu> getLieux() {
         return lieux;
     }
 
     /**
      * @param paramLieux the lieux to set
      */
-    public void setLieux(List<Lieu> paramLieux) {
+    public void setLieux(List<DtoLieu> paramLieux) {
         lieux = paramLieux;
     }
 }

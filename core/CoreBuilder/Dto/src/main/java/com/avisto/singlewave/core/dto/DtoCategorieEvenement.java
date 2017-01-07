@@ -6,7 +6,7 @@ import java.util.List;
 /**
  *
  */
-public class CategorieEvenement extends Categorie {
+public class DtoCategorieEvenement extends DtoCategorie {
 
     /**
      * En vue du SOA.
@@ -16,63 +16,63 @@ public class CategorieEvenement extends Categorie {
     /**
      * Default constructor.
      */
-    public CategorieEvenement() {
+    public DtoCategorieEvenement() {
     }
 
     /**
      *
      */
-    private CategorieEvenement parent;
+    private DtoCategorieEvenement parent;
 
     /**
      *
      */
-    private List<CategorieEvenement> enfants;
+    private List<DtoCategorieEvenement> enfants;
 
     /**
      *
      */
-    private List<Evenement> evenements;
+    private List<DtoEvenement> evenements;
 
     /**
      * @return the parent
      */
-    public CategorieEvenement getParent() {
+    public DtoCategorieEvenement getParent() {
         return parent;
     }
 
     /**
      * @param paramParent the parent to set
      */
-    public void setParent(CategorieEvenement paramParent) {
+    public void setParent(DtoCategorieEvenement paramParent) {
         parent = paramParent;
     }
 
     /**
      * @return the enfants
      */
-    public List<CategorieEvenement> getEnfants() {
+    public List<DtoCategorieEvenement> getEnfants() {
         return enfants;
     }
 
     /**
      * @param paramEnfants the enfants to set
      */
-    public void setEnfants(List<CategorieEvenement> paramEnfants) {
+    public void setEnfants(List<DtoCategorieEvenement> paramEnfants) {
         enfants = paramEnfants;
     }
 
     /**
      * @return the evenements
      */
-    public List<Evenement> getEvenements() {
+    public List<DtoEvenement> getEvenements() {
         return evenements;
     }
 
     /**
      * @param paramEvenements the evenements to set
      */
-    public void setEvenements(List<Evenement> paramEvenements) {
+    public void setEvenements(List<DtoEvenement> paramEvenements) {
         evenements = paramEvenements;
     }
 }
